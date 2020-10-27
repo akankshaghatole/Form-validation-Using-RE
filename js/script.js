@@ -8,7 +8,7 @@ document.getElementById('confirmpassword').addEventListener('blur', matchpasswor
 
 function validateName() {
     const name = document.getElementById('name');
-    const re = /^[a-zA-Z]{2,20}[ ][a-zA-Z]{2,20}$/;
+    const re = /^[a-zA-Z]{3,20}[ ][a-zA-Z]{3,20}$/;
     
     if(!re.test(name.value)) {
         name.classList.add('is-invalid');
@@ -19,7 +19,7 @@ function validateName() {
 
 function validateEmail() {
     const email = document.getElementById('email');
-    const re = /^([a-zA-Z0-9_\.\-]+)@([a-zA-Z0-9_\.\-]+)\.([a-zA-Z]{2,5})$/;
+    const re = /^([a-z0-9_\.\-]+)@([a-z0-9_\.\-]+)\.([a-z]{2,5})$/;
 
     if(!re.test(email.value)) {
         email.classList.add('is-invalid');
@@ -56,7 +56,7 @@ function validateDOB() {
 
 function validatepassword() {
     const password = document.getElementById('password');
-    const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/;
+    const re = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*#?&])(?=.*[a-zA-Z]).{8,}$/;
 
     
     
