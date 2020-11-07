@@ -8,7 +8,7 @@ document.getElementById('confirmpassword').addEventListener('blur', matchpasswor
 
 function validateName() {
     const name = document.getElementById('name');
-    const re = /^[a-zA-Z]{3,20}[ ][a-zA-Z]{3,20}$/;
+    const re = /^[a-zA-Z]{,20}[ ][a-zA-Z]{3,20}$/;
     
     if(!re.test(name.value)) {
         name.classList.add('is-invalid');
@@ -30,7 +30,8 @@ function validateEmail() {
 }
 function validatePhone() {
     const phone = document.getElementById('mobile');
-    const re = /^([+]\d{2})?[6+7+8+9+]{1}[0-9]{9}$/;
+    //const re = /^([+]\d{2})?[6+7+8+9+]{1}[0-9]{9}$/;
+    const re = /^(\+91)?[6|7|8|9]{1}[0-9]{9}$/;
 
     if(!re.test(phone.value)) {
         phone.classList.add('is-invalid');
